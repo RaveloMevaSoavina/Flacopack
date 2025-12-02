@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Flacopack | L'excellence du Packaging</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+	<header class="main-header">
+		<div class="logo">Flacopack</div>
+		<button class="hamburger" onclick="toggleMobileMenu()">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+		<nav class="nav-menu">
+			<ul>
+				<li><a href="#accueil" onclick="closeMobileMenu()">Accueil</a></li>
+				<li><a href="#catalogue" onclick="closeMobileMenu()">Catalogue</a></li>
+				<li><a href="#a-propos" onclick="closeMobileMenu()">À Propos</a></li>
+				<li><a href="#contact" class="cta-button" onclick="closeMobileMenu()">Contact & Devis</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section id="accueil" class="hero-section">
+			<h1>Créons Ensemble<br>Vos Emballages de Rêve</h1>
+			<p>Chaque flacon a une âme, chaque projet a son histoire. Notre équipe dévouée transforme vos idées les plus
+				audacieuses en réalité tangible. Parce que votre succès, c'est notre fierté.
+			</p>
+			<button onclick="document.getElementById('catalogue').scrollIntoView();" class="main-cta">
+				💫 Commençons l'Aventure
+			</button>
+		</section>
+
+		<section id="catalogue" class="catalogue-section">
+			<h2>Notre Sélection de Flacons</h2>
+
+			<div class="filters">
+				<label for="filter-material">Matériau :</label>
+				<select id="filter-material" onchange="filterProducts()">
+					<option value="all">Tous</option>
+					<option value="verre">Verre</option>
+					<option value="pet">PET</option>
+					<option value="pehd">PEHD</option>
+				</select>
+
+				<label for="filter-volume">Volume :</label>
+				<select id="filter-volume" onchange="filterProducts()">
+					<option value="all">Tous</option>
+					<option value="30">30 ml</option>
+					<option value="50">50 ml</option>
+					<option value="100">100 ml</option>
+					<option value="250">250 ml</option>
+					<option value="300">300 ml</option>
+					<option value="500">500 ml</option>
+				</select>
+			</div>
+
+			<div id="product-list" class="product-grid">
+			</div>
+		</section>
+
+		<section id="a-propos" class="about-section">
+			<h2>À Propos de Flacopack</h2>
+			<div class="about-preview">
+				<p>Notre engagement : Qualité, Personnalisation et Durabilité. Une expertise au service de vos
+					emballages depuis notre création.</p>
+
+				<p>Chez Flacopack, nous croyons que l'emballage est la première promesse de votre marque. Nous
+					accompagnons les professionnels, des start-ups aux grands groupes, dans le choix et la conception de
+					flacons qui protègent, valorisent, et simplifient l'expérience consommateur.</p>
+
+				<p>Nos trois piliers fondamentaux : l'expertise matière pour garantir la compatibilité chimique, la
+					flexibilité industrielle pour répondre à tous vos besoins, et l'innovation constante pour que votre
+					produit se démarque sur le marché.</p>
+
+				<a href="apropos.html" class="learn-more-btn">En Savoir Plus sur Notre Histoire</a>
+			</div>
+		</section>
+
+		<section id="contact" class="contact-section">
+			<h2>Contactez-nous pour un Devis</h2>
+			<form action="#" method="POST">
+				<input type="text" placeholder="Nom de l'entreprise" required>
+				<input type="email" placeholder="Votre email professionnel" required>
+				<textarea placeholder="Décrivez votre besoin (Type de flacon, quantité...)" required></textarea>
+				<button type="submit" class="main-cta">Envoyer la Demande</button>
+			</form>
+		</section>
+	</main>
+
+	<footer>
+		<p>&copy; 2024 Flacopack. Tous droits réservés.</p>
+		<p><a href="#">Mentions Légales</a> | <a href="#">CGV</a></p>
+	</footer>
+
+	<script src="script.js"></script>
+</body>
+
+</html>
